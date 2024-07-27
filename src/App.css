@@ -89,6 +89,7 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
+  border: 3px solid black;
 }
 nav.navbar.scrolled {
   padding: 0px 0;
@@ -99,7 +100,7 @@ nav.navbar a.navbar-brand {
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #121212 !important;
+  color: black !important;
   letter-spacing: 0.8px;
   padding: 10px 25px;
   font-size: 18px;
@@ -153,7 +154,7 @@ span.navbar-text {
 }
 .navbar-text button {
   font-weight: 700;
-  color: #121212;
+  color: white;
   border: 1px solid #121212;
   padding: 18px 34px;
   font-size: 18px;
@@ -177,7 +178,7 @@ span.navbar-text {
   transition: 0.3s ease-in-out;
 }
 .navbar-text button:hover {
-  color: #d45d5d;
+  color:black;
 }
 .navbar-text button:hover::before {
 	content: "";
@@ -219,12 +220,12 @@ nav.navbar .navbar-toggler-icon:after {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
 	transform: rotate(45deg);
-	background-color: #121212;
+	background-color: white;
 	height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 	transform: translateY(8px) rotate(-45deg);
-	background-color: #121212;
+	background-color: whitesmoke;
 	height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
