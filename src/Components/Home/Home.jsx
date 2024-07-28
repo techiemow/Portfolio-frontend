@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import porfolio from '../../assets/img/porfolio.jpg'; // Ensure this path is correct
-import "./Home.css"
+import navIcon1 from "../../assets/img/nav-icon1.svg";
+import github2 from '../../assets/img/github.png';
+import "./Home.css";
 import { Button } from '@mui/material';
 import TrackVisibility from 'react-on-screen';
 
@@ -56,24 +57,27 @@ const Home = () => {
       <Container>
         <Row className='align-items-center'>
           <Col xs={12} md={6} xl={12}>
-          <TrackVisibility>
-          {({ isVisible }) =>
-             <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-            <span className="tagline">Welcome to my Portfolio</span>
-            <h1>
-              {"Hi I'm Mowriyaa"} <span className='wrap '>{typingText}</span>
-            </h1>
-            <div className='d-flex '>
-            <button onClick={() => console.log('connect')} className='px-5 mx-1'>Let’s Connect <ArrowRightCircle size={25} /></button>
-  
-            <Button variant='outlined' className='px-5 mx-1' onClick={() => console.log('Resume')}>
-              CV <ArrowRightCircle size={25} />
-            </Button>
-            </div>
-            </div>}
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>{"Hi I'm Mowriyaa"}</h1>
+                  <h2><span className='wrap '>{typingText}</span></h2>
+                  <h5 className='wrap' style={{color:"whitesmoke", marginTop:"5px"}}>Building the web, one stack at a time.</h5>
+                  <div className="d-flex social-icon m-3">
+                      <a href="#"><img src={navIcon1} alt="" /></a>
+                      <a href="#"><img src={github2} alt="" /></a>
+                    </div>
+                  <div className='d-flex '>
+                 
+                    <button onClick={() => console.log('connect')} className='' style={{color:"whitesmoke"}}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                    <Button variant='outlined' className='px-5 mx-1' onClick={() => console.log('Resume')}>
+                      CV <ArrowRightCircle size={25} />
+                    </Button>
+                  </div>
+                </div>}
             </TrackVisibility>
           </Col>
-    
         </Row>
       </Container>
     </section>
