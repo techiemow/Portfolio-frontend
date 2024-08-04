@@ -1,10 +1,10 @@
 .Home {
-  
-  padding: 260px 0px 160px 0px;
+  width:  100%;
+  padding: 260px 100px 160px 100px;
   background: url("../../assets/img/background.jpeg");
-  background-position: top center;
+
   background-size: cover;
-  background-repeat: no-repeat;
+
   height: fit-content;
 }
 

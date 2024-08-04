@@ -117,8 +117,6 @@ const Home = () => {
 
                   </div>
                   <div className='d-flex '>
-
-                    <Button variant="contained" color="success" onClick={() => console.log('connect')} >Let’s Connect <ArrowRightCircle size={25} /></Button>
                     <Button variant='contained' className='px-5 mx-1' onClick={() => console.log('Resume')}>
                       CV <ArrowRightCircle size={25} />
                     </Button>

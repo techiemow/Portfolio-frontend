@@ -19,19 +19,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 75px;
-}
+  
 
 body {
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: scroll;
   position: relative;
-  background-color: black;
+
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -67,11 +65,6 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
-@media (min-width:1700px) {
-  main .container {
-    max-width: 100%;
-  }
-}
 
 p.success {
   color: green;
@@ -89,11 +82,12 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition: 0.32s ease-in-out;
-  border: 3px solid black;
+
+  
 }
 nav.navbar.scrolled {
   padding: 0;
-  background-color: black;
+  background-color: #121212;
 }
 nav.navbar a.navbar-brand {
   width: 9%;

@@ -8,11 +8,12 @@ import About from './Components/About/About';
 
 const App = () => {
     return (
-        <>
+       <div className='container'>
             <Navigation />
             <Home />
-           {/* <About /> */}
-        </>
+           <About />
+          
+           </div>
     );
 };
 

@@ -23,7 +23,7 @@ const Navigation = () => {
     setactivelink(link);
   }
   return (
-    <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+    <Navbar expand="md"  className={scrolled ? "scrolled" : ""}>
     <Container>
       <Navbar.Brand href="/">
         <img src={logo} alt="Logo" />
