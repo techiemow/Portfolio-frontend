@@ -77,7 +77,7 @@ const Navigation = () => {
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
-            <button className="vvd">
+            <button className="vvd" onClick={(e) => handleLinkClick(e, 'contact')}>
               <span>Let’s Connect</span>
             </button>
           </span>

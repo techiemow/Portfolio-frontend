@@ -7,6 +7,8 @@ import EducationTree from './Components/Education/Eduaction';
 import Skills from './Components/Skills/Skills';
 import Projects from './Components/Projects/Projects';
 import Footer from './Components/Footer';
+import ContactForm from './Components/contact/contact';
+import GoToTop from './Components/GoToTop';
 
 
 
@@ -20,6 +22,8 @@ const App = () => {
            <Skills/>
            <Projects />
            <Footer/>
+           <GoToTop/>
+          
           
       </>
     );

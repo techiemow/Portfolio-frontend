@@ -6,6 +6,7 @@ import project2Image from '../../assets/documents/projects/busbooking.jpg';
 import project3Image from '../../assets/documents/projects/hotelbooking.png';
 import project4Image from '../../assets/documents/projects/pet3.jpeg';
 import project from "../../assets/documents/projects/project.png"
+
 const projects = [
   {
     title: 'Elite eMart',
@@ -44,10 +45,9 @@ const projects = [
 const Projects = () => {
   return (
     <div id="projects" className="container my-5 p-5">
-    
-      <h1 className=' skills-heading text-center mb-4' style={{ color: "black" }}>
-            
-            <img src={project} alt='Skills' /> Projects </h1>
+      <h1 className='skills-heading text-center mb-4' style={{ color: "black" }}>
+        <img src={project} alt='Skills' /> Projects
+      </h1>
       <Carousel
         indicators={false}
         interval={3000}
@@ -57,13 +57,15 @@ const Projects = () => {
       >
         {projects.map((project, index) => (
           <Carousel.Item key={index}>
-            <div className="d-flex justify-content-around p-3">
+            <div className="d-flex justify-content-center p-3 flex-wrap">
               <Card
                 style={{
-                  width: '35%',
-                  height: '500px',
+                  width: '100%',
+                  maxWidth: '400px',
+                  height: 'auto',
                   transition: 'transform 0.5s ease, box-shadow 0.5s ease',
                   boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                  marginBottom: '20px',
                 }}
                 className="hover-shadow"
               >
@@ -71,22 +73,21 @@ const Projects = () => {
                   variant="top"
                   src={project.image}
                   alt={project.title}
-                  style={{ height: '290px', objectFit: 'cover' }}
+                  style={{ height: 'auto', maxHeight: '250px', objectFit: 'cover' }}
                 />
                 <Card.Body>
                   <Card.Title>{project.title}</Card.Title>
-                  <Card.Text style={{ height: '100px' }}>
+                  <Card.Text style={{ height: 'auto', maxHeight: '100px', overflow: 'hidden' }}>
                     {project.description}
                   </Card.Text>
-                  <div className="d-flex justify-content-between">
+                  <div className="d-flex justify-content-between flex-wrap">
                     <Button
                       variant="primary"
                       href={project.website}
                       target="_blank"
                       className="mr-2"
-                      style={{ marginRight: '8px' }}
+                      style={{ marginRight: '8px', marginBottom: '10px' }}
                     >
-                      
                       Website
                     </Button>
                     <Button
@@ -94,7 +95,7 @@ const Projects = () => {
                       href={project.frontend}
                       target="_blank"
                       className="mr-2"
-                      style={{ marginRight: '8px' }}
+                      style={{ marginRight: '8px', marginBottom: '10px' }}
                     >
                       Front-end
                     </Button>
@@ -102,6 +103,7 @@ const Projects = () => {
                       variant="secondary"
                       href={project.backend}
                       target="_blank"
+                      style={{ marginBottom: '10px' }}
                     >
                       Back-end
                     </Button>

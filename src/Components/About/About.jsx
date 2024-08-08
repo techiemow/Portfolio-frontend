@@ -36,16 +36,26 @@ const AboutContainer = styled.div`
   box-sizing: border-box;
   animation: ${fadeIn} 1s ease-in-out;
   background: #f9f9f9;
-  padding: 200px 100px; /* Adjusted for more vertical space */
+  padding: 100px 50px; /* Adjusted padding */
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  // margin: 40px 0; /* Added margin to give space above and below the container */
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    padding: 50px 20px; /* Reduced padding for mobile */
+  }
 `;
 
 const Content = styled.div`
   max-width: 60%;
   padding-right: 20px;
   animation: ${slideIn} 1s ease-in-out;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding-right: 0;
+    margin-top: 20px; /* Added margin for better spacing on mobile */
+  }
 `;
 
 const Title = styled.h1`
@@ -66,6 +76,14 @@ const Title = styled.h1`
     background-color: #007BFF;
     animation: ${underline} 2s ease-in-out infinite;
   }
+
+  @media (max-width: 768px) {
+    font-size: 2rem; /* Adjusted font size for smaller screens */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.8rem; /* Further adjusted for very small screens */
+  }
 `;
 
 const Paragraph = styled.p`
@@ -74,6 +92,14 @@ const Paragraph = styled.p`
   color: #555;
   margin-bottom: 20px;
   text-align: justify;
+
+  @media (max-width: 768px) {
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem; /* Further adjusted for very small screens */
+  }
 `;
 
 const Avatar = styled.img`
@@ -87,6 +113,10 @@ const Avatar = styled.img`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: 768px) {
+    max-width: 200px; /* Reduced size for mobile */
+  }
 `;
 
 const About = () => {
@@ -95,7 +125,11 @@ const About = () => {
       <Content>
         <Title>Some Things About Me 🧏‍♂️</Title>
         <Paragraph>
-          I am a graduate from the University College of Engineering (Anna University-Trichy), where I earned a B.E. degree in Electronics and Electrical Engineering. Although my bachelor's degree is in Electrical, I have always been fascinated by the field of Information Technology.
+          Hello everyone,
+
+          I am from Trichy, Tamil Nadu, India. I graduated from the University College of Engineering (Anna University - Trichy), where I earned a B.E. degree in Electronics and Electrical Engineering. Although my bachelor's degree is in Electrical Engineering, I have always been fascinated by the field of Information Technology.
+
+
         </Paragraph>
         <Paragraph>
           In addition to my formal education, I have enhanced and improved my technical skills by completing a MERN Full-Stack course. I consider myself a constant learner, always striving to expand my knowledge. While I recognize that I still need to improve my skills as a team player, I am dedicated to working in collaborative environments, ensuring seamless coordination and collective success with others.

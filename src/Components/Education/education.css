@@ -1,5 +1,3 @@
-/* education.css */
-
 #Resume {
   width: 100%;
   height: 100%;
@@ -31,29 +29,47 @@
   justify-content: center;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns layout */
-  gap: 20px; /* Space between grid items */
-  justify-content: center;
-  flex-wrap: wrap;
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
-.box {
+.timeline-item {
+  position: relative;
   width: 50%;
-  height: auto;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item .box {
   color: white !important;
   background: linear-gradient(135deg, #C877B4, #FCF180); /* Updated gradient direction */
-  margin: 20px;
-  border-radius: 25px 25px;
+  border-radius: 25px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 20px;
   box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 1s ease-in-out;
+}
+
+.timeline-item.left .box {
+  margin-left: auto;
+}
+
+.timeline-item.right .box {
+  margin-right: auto;
 }
 
 .box:hover {
@@ -67,8 +83,19 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  .timeline-item {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .timeline-item.left, .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item .connector {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

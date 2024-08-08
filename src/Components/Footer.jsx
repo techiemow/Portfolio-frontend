@@ -1,5 +1,8 @@
 import React from 'react';
+import { FaMapLocation } from 'react-icons/fa6';
+import { MdEmail } from 'react-icons/md';
 import styled, { keyframes } from 'styled-components';
+import ContactForm from './contact/contact';
 
 // Keyframes for animations
 const fadeIn = keyframes`
@@ -25,15 +28,22 @@ const FooterContainer = styled.footer`
   background: #333;
   color: #fff;
   padding: 40px 20px;
-  text-align: center;
   position: relative;
   overflow: hidden;
   animation: ${fadeIn} 1s ease-in-out;
 `;
 
-const FooterContent = styled.div`
+const FooterContentWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
+`;
+
+const FooterContent = styled.div`
+  max-width: 45%;
   animation: ${slideUp} 1s ease-in-out;
 `;
 
@@ -51,8 +61,8 @@ const FooterText = styled.p`
 
 const QuickLinks = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: 20px;
 `;
 
@@ -94,26 +104,39 @@ const ContactItem = styled.p`
   margin: 5px 0;
 `;
 
+const FormWrapper = styled.div`
+  max-width: 45%;
+  animation: ${slideUp} 1s ease-in-out;
+`;
+
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterContent>
-        <FooterTitle>Mowriyaa's Portfolio</FooterTitle>
-        <FooterText>Thank you for visiting my personal portfolio website. Connect with me over socials.</FooterText>
+      <FooterContentWrapper>
+        <FooterContent>
+          <FooterTitle>Mowriyaa's Portfolio</FooterTitle>
+          <FooterText>Thank you for visiting my personal portfolio website. Connect with me over socials.</FooterText>
 
-        <QuickLinks>
-          <QuickLink href="#home">Home</QuickLink>
-          <QuickLink href="#about">About</QuickLink>
-          <QuickLink href="#skills">Skills</QuickLink>
-          <QuickLink href="#projects">Projects</QuickLink>
-          <QuickLink href="#education">Education</QuickLink>
-          <QuickLink href="#contacts">Contacts</QuickLink>
-        </QuickLinks>
-        <ContactInfo>
-          <ContactItem>mowriyaabk@gmail.com</ContactItem>
-          <ContactItem>Trichy, Tamil Nadu, India</ContactItem>
-        </ContactInfo>
-      </FooterContent>
+          <QuickLinks>
+            <QuickLink href="#home">Home</QuickLink>
+            <QuickLink href="#about">About</QuickLink>
+            <QuickLink href="#skills">Skills</QuickLink>
+            <QuickLink href="#projects">Projects</QuickLink>
+            <QuickLink href="#education">Education</QuickLink>
+            <QuickLink href="#contacts">Contacts</QuickLink>
+          </QuickLinks>
+          <ContactInfo>
+            <ContactItem><MdEmail /> mowriyaabk@gmail.com</ContactItem>
+            <ContactItem><FaMapLocation /> Trichy, Tamil Nadu, India</ContactItem>
+          </ContactInfo>
+        </FooterContent>
+        <FormWrapper>
+          <ContactForm />
+        </FormWrapper>
+      </FooterContentWrapper>
+      <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', backgroundColor: '#333', padding: '10px', color: '#fff', textAlign: 'center' }}>
+         © 2024 Mowriyaa. All rights reserved.  |  Designed and developed by <a href="https://www.linkedin.com/in/mowriyaabk/" target="_blank" rel="noopener noreferrer">Mowriyaa</a>
+      </div>
     </FooterContainer>
   );
 }

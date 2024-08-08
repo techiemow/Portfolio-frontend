@@ -1,7 +1,6 @@
 import React from 'react';
 import educationData from './education';
 import "./education.css";
-import education from "../../assets/img/education.png";
 
 const EducationTree = () => {
   // Flatten the education data into a single array for display
@@ -35,12 +34,15 @@ const EducationTree = () => {
           <span className="material-symbols-outlined">school</span>Education
         </h3>
       </div>
-      <div className='d-flex justify-content-center justify-items-center flex-wrap'>
+      <div className='timeline'>
         {timelineItems.map((item, index) => (
-          <div className='box' key={index}>
-            <h4>{item.title}</h4>
-            <p>{item.date}</p>
-            <p>{item.description}</p>
+          <div className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`} key={index}>
+            <div className='box'>
+              <h4>{item.title}</h4>
+              <p>{item.date}</p>
+              <p>{item.description}</p>
+            </div>
+        
           </div>
         ))}
       </div>

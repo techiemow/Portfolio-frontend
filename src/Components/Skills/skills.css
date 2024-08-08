@@ -1,97 +1,133 @@
 #skills {
-    padding: 150px 150px;
-    background-color: #f8f9fa;
-    color: black;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  .type{
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 5px dashed rebeccapurple;
-    background-color: burlywood;
+  padding: 80px 20px; /* Adjusted padding for mobile devices */
+  background-color: #f8f9fa;
+  color: black;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.type {
+  font-size: 18px; /* Slightly reduced font size for mobile */
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 5px dashed rebeccapurple;
+  background-color: burlywood;
+}
+
+.skills-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.skills-heading h1 {
+  display: flex;
+  align-items: center;
+  font-size: 2.2em; /* Adjusted font size for mobile */
+}
+
+.skills-heading img {
+  margin-right: 15px;
+  width: 40px;
+  height: 40px; /* Adjusted icon size */
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skills-box {
+  background-color: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px; /* Adjusted padding for mobile */
+  margin: 10px; /* Reduced margin */
+  flex: 1;
+  max-width: 100%; /* Full width on smaller screens */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px; /* Adjusted margin for mobile */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item img {
+  width: 60px; /* Reduced size for mobile */
+  height: 60px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.skill-item img:hover {
+  transform: scale(1.1);
+}
+
+.skill-item p {
+  margin: 0;
+  font-size: 1em; /* Adjusted font size for mobile */
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .skills-wrapper {
+    flex-direction: column; /* Stack the boxes vertically on smaller screens */
+    align-items: center;
+  }
+
+  .skills-box {
+    max-width: 100%; /* Ensure boxes take full width */
+  }
+
+  .skills-list {
+    justify-content: center; /* Center align items in mobile view */
   }
 
   .skills-heading {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    margin-left: 550px;
+    margin-left: 0; /* Center align the heading */
+    text-align: center;
   }
-  
+}
+
+@media (max-width: 576px) {
   .skills-heading h1 {
-    display: flex;
-    align-items: center;
-    font-size: 2.5em;
+    font-size: 1.8em; /* Further reduced font size for very small screens */
   }
-  
-  .skills-heading img {
-    margin-right: 15px;
+
+  .type {
+    font-size: 16px; /* Reduced font size */
   }
-  
-  .skills-wrapper {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .skills-box {
-    background-color: #fff;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 20px;
-    flex: 1;
-    max-width: 45%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .skills-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Ensure two items per row */
-  }
-  
-  .skill-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
+
   .skill-item img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    width: 50px;
+    height: 50px; /* Smaller icons for small screens */
   }
-  
-  .skill-item img:hover {
-    transform: scale(1.1);
-  }
-  
+
   .skill-item p {
-    margin: 0;
-    font-size: 1.1em;
-    font-weight: bold;
+    font-size: 0.9em; /* Slightly smaller text */
   }
-  
+}
