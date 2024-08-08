@@ -2,13 +2,11 @@
   width:  100%;
   padding: 260px 100px 160px 100px;
   background: url("../../assets/img/background.jpeg");
-
   background-size: cover;
-
-  height: fit-content;
+   height: fit-content;
 }
 
-.Home .tagline {
+.Home .tagline {  
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;

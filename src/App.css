@@ -29,8 +29,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   position: relative;
-
-  color: #fff !important;
+  color: #fff;
   font-family: 'Centra', sans-serif !important;
 }
 
@@ -83,6 +82,7 @@ nav.navbar {
   z-index: 9999;
   transition: 0.32s ease-in-out;
 
+
   
 }
 nav.navbar.scrolled {
@@ -103,7 +103,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
-  color: cornflowerblue;
+
 }
 span.navbar-text {
   display: flex;
@@ -148,10 +148,12 @@ nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
+  background-color: #121212;
 }
 nav.navbar .navbar-toggler-icon {
   width: 24px;
   height: 17px;
+  
   background-image: none;
   position: relative;
   border-bottom: 2px solid #121212;
@@ -190,6 +192,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
+nav.navbar.toggled {
+  background: linear-gradient(to left, #6FB09A, #D24348);
+}
 /* Media Queries for Mobile View */
 @media (max-width: 767px) {
   nav.navbar .navbar-toggler {

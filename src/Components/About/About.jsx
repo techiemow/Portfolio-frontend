@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import './About.css';
-import EducationTree from './Eduaction';
+import myavatar from "../../assets/img/my-avatar.png";
 
 const fadeIn = keyframes`
   from {
@@ -32,13 +32,14 @@ const underline = keyframes`
 
 const AboutContainer = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
   box-sizing: border-box;
   animation: ${fadeIn} 1s ease-in-out;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const Content = styled.div`
@@ -77,22 +78,31 @@ const Paragraph = styled.p`
   margin-bottom: 20px;
 `;
 
+const Avatar = styled.img`
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
 const About = () => {
   return (
-    <div className='About'>
+    <div className="About">
       <AboutContainer>
         <Content>
-          <Title>About Me 🧏</Title>
+          <Title>Some Things About Me 🧏‍♂️</Title>
           <Paragraph>
             I am a graduate from the University College of Engineering (Anna University- Trichy) Bit-Campus, where I earned a B.E. degree in Electronics and Electrical Engineering. Although my bachelor's degree is in Electrical, I have always been fascinated by the field of Information Technology.
           </Paragraph>
           <Paragraph>
-            In addition to my formal education, I have enhanced and improved my technical skills by completing a MERN Full-Stack course at Guvi. I consider myself a constant learner, always striving to expand my knowledge. While I recognize that I still need to improve my skills as a team player, I am dedicated to working in collaborative environments, ensuring seamless coordination and collective success with others.
+            In addition to my formal education, I have enhanced and improved my technical skills by completing a MERN Full-Stack course. I consider myself a constant learner, always striving to expand my knowledge. While I recognize that I still need to improve my skills as a team player, I am dedicated to working in collaborative environments, ensuring seamless coordination and collective success with others.
           </Paragraph>
-        
+          
         </Content>
+        <Avatar src={myavatar} alt="Mowriyaa" />
       </AboutContainer>
-      <EducationTree/>
     </div>
   );
 }
