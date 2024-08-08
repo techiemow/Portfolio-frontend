@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import './About.css';
 import myavatar from "../../assets/img/my-avatar.png";
 
 const fadeIn = keyframes`
@@ -32,23 +31,20 @@ const underline = keyframes`
 
 const AboutContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   animation: ${fadeIn} 1s ease-in-out;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+  padding: 200px 100px; /* Adjusted for more vertical space */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  // margin: 40px 0; /* Added margin to give space above and below the container */
 `;
 
 const Content = styled.div`
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  text-align: center;
+  max-width: 60%;
+  padding-right: 20px;
   animation: ${slideIn} 1s ease-in-out;
 `;
 
@@ -58,6 +54,7 @@ const Title = styled.h1`
   color: #333;
   position: relative;
   overflow: hidden;
+  font-weight: 700;
   
   &::before {
     content: '';
@@ -66,44 +63,46 @@ const Title = styled.h1`
     height: 4px;
     bottom: 0;
     left: 0;
-    background-color: #333;
+    background-color: #007BFF;
     animation: ${underline} 2s ease-in-out infinite;
   }
 `;
 
 const Paragraph = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.8;
   color: #555;
   margin-bottom: 20px;
+  text-align: justify;
 `;
 
 const Avatar = styled.img`
   width: 100%;
   max-width: 300px;
   height: auto;
-  margin-left: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const About = () => {
   return (
-    <div className="About">
-      <AboutContainer>
-        <Content>
-          <Title>Some Things About Me 🧏‍♂️</Title>
-          <Paragraph>
-            I am a graduate from the University College of Engineering (Anna University- Trichy) Bit-Campus, where I earned a B.E. degree in Electronics and Electrical Engineering. Although my bachelor's degree is in Electrical, I have always been fascinated by the field of Information Technology.
-          </Paragraph>
-          <Paragraph>
-            In addition to my formal education, I have enhanced and improved my technical skills by completing a MERN Full-Stack course. I consider myself a constant learner, always striving to expand my knowledge. While I recognize that I still need to improve my skills as a team player, I am dedicated to working in collaborative environments, ensuring seamless coordination and collective success with others.
-          </Paragraph>
-          
-        </Content>
-        <Avatar src={myavatar} alt="Mowriyaa" />
-      </AboutContainer>
-    </div>
+    <AboutContainer id="about">
+      <Content>
+        <Title>Some Things About Me 🧏‍♂️</Title>
+        <Paragraph>
+          I am a graduate from the University College of Engineering (Anna University-Trichy), where I earned a B.E. degree in Electronics and Electrical Engineering. Although my bachelor's degree is in Electrical, I have always been fascinated by the field of Information Technology.
+        </Paragraph>
+        <Paragraph>
+          In addition to my formal education, I have enhanced and improved my technical skills by completing a MERN Full-Stack course. I consider myself a constant learner, always striving to expand my knowledge. While I recognize that I still need to improve my skills as a team player, I am dedicated to working in collaborative environments, ensuring seamless coordination and collective success with others.
+        </Paragraph>
+      </Content>
+      <Avatar src={myavatar} alt="Mowriyaa" />
+    </AboutContainer>
   );
 }
 

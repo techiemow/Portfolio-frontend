@@ -1,42 +1,82 @@
+/* education.css */
 
-  #Resume {
-    width: 100%;
-    height: 100%;
-    --s: 200px; /* control the size */
-    --c1: #1d1d1d;
-    --c2: #4e4f51;
-    --c3: #3c3c3c;
+#Resume {
+  width: 100%;
+  height: 100%;
+  --s: 200px; /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
 
-    background: repeating-conic-gradient(
-          from 30deg,
-          #0000 0 120deg,
-          var(--c3) 0 180deg
-        )
-        calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-      repeating-conic-gradient(
-        from 30deg,
-        var(--c1) 0 60deg,
-        var(--c2) 0 120deg,
-        var(--c3) 0 180deg
-      );
-    background-size: var(--s) calc(var(--s) * 0.577);
+  background: repeating-conic-gradient(
+      from 30deg,
+      #0000 0 120deg,
+      var(--c3) 0 180deg
+  )
+  calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+  repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+  );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns layout */
+  gap: 20px; /* Space between grid items */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 50%;
+  height: auto;
+  color: white !important;
+  background: linear-gradient(135deg, #C877B4, #FCF180); /* Updated gradient direction */
+  margin: 20px;
+  border-radius: 25px 25px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.box h4, .box p {
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
   }
+}
 
-  .box {
-    width: 400px;
-    height: auto;
-    background: linear-gradient(#C877B4, #FCF180);
-    margin: 20px;
-    border-radius: 50px 25px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    position: relative;
-    padding: 20px;
-    box-sizing: border-box;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .box h4, .box p {
-    margin: 5px 0;
-
+  to {
+    opacity: 1;
   }
-
+}

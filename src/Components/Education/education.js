@@ -7,7 +7,7 @@ const educationData = [
     },
     college: {
       Institute: "University College of Engineering (Anna University- Trichy) Bit-Campus",
-      year: 2023,
+      year: 2019+"-"+2023,
       degree: "B.E",
       branch: "Electronics and Electrical Engineering",
       city: "Trichy",

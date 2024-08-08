@@ -1,3 +1,97 @@
-#skills{
+#skills {
+    padding: 150px 150px;
+    background-color: #f8f9fa;
     color: black;
-}
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .type{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 5px dashed rebeccapurple;
+    background-color: burlywood;
+
+  }
+
+  .skills-heading {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 550px;
+  }
+  
+  .skills-heading h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+  }
+  
+  .skills-heading img {
+    margin-right: 15px;
+  }
+  
+  .skills-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .skills-box {
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px;
+    flex: 1;
+    max-width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skills-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure two items per row */
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-item img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-item img:hover {
+    transform: scale(1.1);
+  }
+  
+  .skill-item p {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  

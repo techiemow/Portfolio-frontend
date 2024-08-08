@@ -52,7 +52,7 @@ const Home = () => {
   const typingText = useTypingEffect(texts);
 
   return (
-    <section className='Home' id='Banner'>
+    <section className='Home' id='home'>
       <Container>
         <Row className='align-items-center'>
           <Col xs={12} md={6} xl={12}>
