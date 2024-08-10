@@ -26,6 +26,8 @@ const ContactForm = () => {
   // Handle form submission
   const onSubmit = async(values, { resetForm }) => {
     try {
+      console.log(url,"url");
+      
       const response = await axios.post(`${url}/send-email`, values);
       console.log('Email sent successfully:', response);
       resetForm();
