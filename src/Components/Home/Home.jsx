@@ -60,7 +60,7 @@ const Home = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
-            <h1>Hi <span style={{ color:"Menu" }}>I'm Mowriyaa</span></h1>
+                  <h1>Hi <span style={{ color: "Menu" }}>I'm Mowriyaa</span></h1>
 
                   <div style={{ height: '40px', display: 'flex', alignItems: 'center' }}>
                     <h2 style={{ marginBottom: "1px", color: "black" }}><span className='wrap'>{typingText}</span></h2>
@@ -118,9 +118,16 @@ const Home = () => {
 
                   </div>
                   <div className='d-flex '>
-                    <Button variant='contained' className='px-5 mx-1' onClick={() => console.log('Resume')}>
+                    <Button
+                      variant="contained"
+                      className="px-5 mx-1"
+                      onClick={() => {
+                        window.open('https://example.com/your_resume.pdf', '_blank');
+                      }}
+                    >
                       CV <ArrowRightCircle size={25} />
                     </Button>
+
                   </div>
                 </div>}
             </TrackVisibility>
