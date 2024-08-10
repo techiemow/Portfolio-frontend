@@ -2,6 +2,9 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import "./contact.css"; // Ensure you have this stylesheet for the styles
+import { url } from '../../constants';
+
+import axios from 'axios'; // Import axios for making HTTP requests
 
 const ContactForm = () => {
   // Validation schema using Yup
@@ -21,10 +24,16 @@ const ContactForm = () => {
   };
 
   // Handle form submission
-  const onSubmit = (values, { resetForm }) => {
-    console.log('Form data', values);
-    // Add your form submission logic here (e.g., send data to a server)
-    resetForm();
+  const onSubmit = async(values, { resetForm }) => {
+    try {
+      const response = await axios.post(`${url}/send-email`, values);
+      console.log('Email sent successfully:', response);
+      resetForm();
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+  
+
   };
 
   return (

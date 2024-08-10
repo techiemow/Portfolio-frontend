@@ -122,7 +122,7 @@ const Home = () => {
                       variant="contained"
                       className="px-5 mx-1"
                       onClick={() => {
-                        window.open('https://example.com/your_resume.pdf', '_blank');
+                        window.open('https://drive.google.com/file/d/1kpHGEODmhN_oRtC9zfPdORVemR9w5WQH/view?usp=sharing', '_blank');
                       }}
                     >
                       CV <ArrowRightCircle size={25} />
