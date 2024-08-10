@@ -70,7 +70,7 @@ const Home = () => {
                     <ul class="example-2">
                       <li class="icon-content">
                         <a
-                          href="https://linkedin.com/"
+                          href="https://www.linkedin.com/in/mowriyaa-bk-0344091b5/"
                           aria-label="LinkedIn"
                           data-social="linkedin"
                           target='_blank'
@@ -94,7 +94,7 @@ const Home = () => {
                         <div class="tooltip">LinkedIn</div>
                       </li>
                       <li class="icon-content">
-                        <a href="https://www.github.com/" aria-label="GitHub" data-social="github" target='_blank'>
+                        <a href="https://github.com/techiemow" aria-label="GitHub" data-social="github" target='_blank'>
                           <div class="filled"></div>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
