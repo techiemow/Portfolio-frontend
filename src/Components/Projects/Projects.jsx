@@ -116,7 +116,7 @@ const Projects = () => {
         ))}
       </Carousel>
       <Typography style={{ color: 'red', marginTop: '10px', textAlign: 'center' }}>
-        Please note that loading times may vary depending on the server response. We appreciate your patience.
+      Please note that the loading time may vary depending on the server response. Your patience is appreciated.
       </Typography>
     </div>
   );
