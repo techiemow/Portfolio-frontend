@@ -6,6 +6,7 @@ import project2Image from '../../assets/documents/projects/busbooking.jpg';
 import project3Image from '../../assets/documents/projects/hotelbooking.png';
 import project4Image from '../../assets/documents/projects/pet3.jpeg';
 import project from "../../assets/documents/projects/project.png"
+import { Typography } from '@mui/material';
 
 const projects = [
   {
@@ -114,6 +115,9 @@ const Projects = () => {
           </Carousel.Item>
         ))}
       </Carousel>
+      <Typography style={{ color: 'red', marginTop: '10px', textAlign: 'center' }}>
+        Please note that loading times may vary depending on the server response. We appreciate your patience.
+      </Typography>
     </div>
   );
 };
