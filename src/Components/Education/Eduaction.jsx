@@ -11,11 +11,6 @@ const EducationTree = () => {
       description: `${educationData[0].college.degree} in ${educationData[0].college.branch}, CGPA: ${educationData[0].college.CGPA}`
     },
     {
-      title: educationData[0].course.institute,
-      date: `Duration: ${educationData[0].course.Duration}`,
-      description: `Course: ${educationData[0].course.Course_name}`
-    },
-    {
       title: educationData[0].HSC.school,
       date: `${educationData[0].HSC.year}`,
       description: `${educationData[0].HSC.branch}, Percentage: ${educationData[0].HSC.percentage}`

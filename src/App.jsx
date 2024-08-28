@@ -9,6 +9,7 @@ import Projects from './Components/Projects/Projects';
 import Footer from './Components/Footer';
 import ContactForm from './Components/contact/contact';
 import GoToTop from './Components/GoToTop';
+import Certification from './Components/certification/certification';
 
 
 
@@ -19,6 +20,8 @@ const App = () => {
             <Home />
            <About />
            <EducationTree />
+           <Certification />
+           
            <Skills/>
            <Projects />
            <Footer/>
