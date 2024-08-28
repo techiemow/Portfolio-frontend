@@ -54,19 +54,20 @@ const Navigation = () => {
             >
               About
             </Nav.Link>
-            <Nav.Link 
-              href="#certificates" 
-              className={activeLink === 'certificates' ? 'active navbar-link' : 'navbar-link'} 
-              onClick={(e) => handleLinkClick(e, 'certificates')}
-            >
-              Certificates
-            </Nav.Link>
+     
             <Nav.Link 
               href="#skills" 
               className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} 
               onClick={(e) => handleLinkClick(e, 'skills')}
             >
               Skills
+            </Nav.Link>
+            <Nav.Link 
+              href="#certificates" 
+              className={activeLink === 'certificates' ? 'active navbar-link' : 'navbar-link'} 
+              onClick={(e) => handleLinkClick(e, 'certificates')}
+            >
+              Certificates
             </Nav.Link>
             <Nav.Link 
               href="#projects" 
