@@ -69,6 +69,13 @@ const Navigation = () => {
               Projects
             </Nav.Link>
             <Nav.Link 
+              href="#certificates" 
+              className={activeLink === 'certificates' ? 'active navbar-link' : 'navbar-link'} 
+              onClick={(e) => handleLinkClick(e, 'certificates')}
+            >
+              Certificates
+            </Nav.Link>
+            <Nav.Link 
               href="#contact" 
               className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} 
               onClick={(e) => handleLinkClick(e, 'contact')}

@@ -74,7 +74,7 @@ const CertificateImage = styled.img`
 // Programs component that renders the list of certificates
 function Programs() {
   return (
-    <div className="container my-5 p-5">
+    <div id='certificates' className="container my-5 p-5">
 
      <HeaderContainer>
         <CertificateImage src={certificate} alt="Certificate Icon" />
