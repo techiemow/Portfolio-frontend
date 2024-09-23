@@ -122,7 +122,7 @@ const Home = () => {
                       variant="contained"
                       className="px-5 mx-1"
                       onClick={() => {
-                        window.open('https://drive.google.com/file/d/1pxCS_lpKIZ3QSDzFLYU2PSGqf3rABI6Q/view', '_blank');
+                        window.open('https://drive.google.com/file/d/1ba9VOzgyACKpJsMcfTmpj4m1IpZ0koqK/view', '_blank');
                       }}
                     >
                       CV <ArrowRightCircle size={25} />
