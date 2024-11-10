@@ -5,6 +5,7 @@ import project1Image from '../../assets/documents/projects/emart3.png';
 import project2Image from '../../assets/documents/projects/busbooking.jpg';
 import project3Image from '../../assets/documents/projects/hotelbooking.png';
 import project4Image from '../../assets/documents/projects/pet3.jpeg';
+import project5Image from "../../assets/documents/projects/IMDB.webp"
 import project from "../../assets/documents/projects/project.png"
 import { Typography } from '@mui/material';
 
@@ -41,6 +42,14 @@ const projects = [
     frontend: 'https://github.com/techiemow/Pet-sitting-app-Frontend',
     backend: 'https://github.com/techiemow/Pet-Sitting-app',
   },
+  {
+    title: 'IMDB Clone App',
+    image: project5Image,
+    description: 'Developed a full-stack web application that replicates core functionalities of IMDB. Enabled users to create, read, and update data on movies, actors, and producers, showcasing CRUD operations and entity relationships.',
+    website: 'https://mmdbclone.netlify.app',
+    frontend: 'https://github.com/techiemow/IMDB-Front-end',
+    backend: 'https://github.com/techiemow/IMDB-Backend',
+  }
 ];
 
 const Projects = () => {
